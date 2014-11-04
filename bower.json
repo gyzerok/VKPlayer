@@ -1,0 +1,31 @@
+{
+    "name": "VKPlayer-tools",
+    "version": "0.1.0",
+    "main": "src/index.html",
+    "license": "GPL-3.0",
+    "private": true,
+    "dependencies": {
+        "marionette": "2.2.*",
+        "bootstrap": "3.*",
+        "normalize-css": "3.*"
+    },
+    "exportsOverride": {
+        "jquery": {
+            "": "dist/*.min.js"
+        },
+        "marionette": {
+            "": "lib/*.js"
+        },
+        "bootstrap": {
+            "css": "dist/css/*.min.css",
+            "fonts": "dist/fonts/*",
+            "js": "dist/js/*.min.js"
+        },
+        "backbone.babysitter": {
+            "": "lib/*.min.js"
+        },
+        "backbone.wreqr": {
+            "": "lib/*.min.js"
+        }
+    }
+}
