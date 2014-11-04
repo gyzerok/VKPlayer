@@ -1,0 +1,31 @@
+{
+    "name": "VKPlayer",
+    "description": "VKPlayer",
+    "version": "99.99.99",
+    "license": "MIT",
+    "private": true,
+    "main": "app://host/index.html",
+    "node-main": "index.js",
+    "dependencies": {
+        "handlebars": "2.0.0",
+        "lodash": "^2.4.1"
+    },
+    "window": {
+        "title": "VKPlayer",
+        "toolbar": true,
+        "frame": true,
+        "width": 1100,
+        "height": 650,
+        "min_width": 1000,
+        "min_height": 650,
+        "resizable": true,
+        "position": "center",
+        "show": false
+    },
+    "webkit": {
+        "plugin": true,
+        "page-cache": true
+    },
+    "chromium-args": "--enable-speech-input --enable-speech-recognition --enable-webaudio-input --disk-cache-size 102400",
+    "env": "development"
+}

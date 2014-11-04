@@ -5,6 +5,8 @@ module.exports = function (grunt) {
         'clean:tmp',
         'install',
         'copy:prod',
+        'jade:dev',
+        'sass:dev',
         'nodewebkit:linux'
     ]);
 };
