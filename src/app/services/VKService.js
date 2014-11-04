@@ -59,7 +59,7 @@ module.exports = new (Backbone.Marionette.Object.extend({
             res.on('data', function (chunk) {
                 data += chunk;
             }).on('end', function () {
-                cb(JSON.parse(data));
+                cb(JSON.parse(data).response);
             });
         });
     }
