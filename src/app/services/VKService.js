@@ -51,7 +51,7 @@ module.exports = new (Backbone.Marionette.Object.extend({
         }.bind(this));
     },
 
-    getAudio: function () {
+    getAudio: function (cb) {
         var url = vkApiUrl + 'audio.get?access_token=' + this.token;
         var data = '';
         https.get(url, function (res) {
