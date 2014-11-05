@@ -5,7 +5,7 @@ var Handlebars = require('handlebars');
 exports.start = function () {
 
     global.fs = require('fs');
-    global.path = require('path');
+    global.path = require('path')
 
     window.Backbone.Marionette.TemplateCache.prototype.loadTemplate = function (templateId) {
         return fs.readFileSync(process.cwd() + '/app/' + templateId + '.html').toString();
@@ -23,7 +23,5 @@ exports.start = function () {
     global.VK = window.VK;
     global.localStorage = window.localStorage;
 
-    var App = require('./app');
-    global.App = App;
-    App.start();
+    require('./app').start();
 };

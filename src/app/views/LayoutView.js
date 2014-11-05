@@ -1,8 +1,8 @@
 'use strict';
 
-module.exports = function (PlayerApp) {
+module.exports = function (App) {
     return Backbone.Marionette.LayoutView.extend({
-        template: PlayerApp.getTemplate('_layout'),
+        template: path.join('views', 'templates', '_layout'),
 
         regions: {
             playerReg: 'div#player-region',

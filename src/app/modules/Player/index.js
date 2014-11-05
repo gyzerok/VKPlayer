@@ -8,17 +8,9 @@ module.exports = App.module('PlayerApp', Backbone.Marionette.Module.extend({
         App.router.processAppRoutes(this.playerController, {
             'index': 'indexAction'
         });
-
-        var PlayerLayoutView = require('./views/PlayerLayoutView')(this);
-        this.layoutView = new PlayerLayoutView();
-        App.show(this.layoutView);
-    },
-
-    show: function (view) {
-        this.layoutView.contentReg.show(view);
     },
 
     getTemplate: function (templateId) {
-        return path.join('modules', 'Search', 'views', 'templates', templateId)
+        return path.join('modules', 'Player', 'views', 'templates', templateId)
     }
 }));
