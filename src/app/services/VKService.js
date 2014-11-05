@@ -55,7 +55,6 @@ module.exports = new (Backbone.Marionette.Object.extend({
         var url = vkApiUrl + 'audio.get?access_token=' + this.token;
         var data = '';
         https.get(url, function (res) {
-            window.console.log(res.statusCode);
             res.on('data', function (chunk) {
                 data += chunk;
             }).on('end', function () {
