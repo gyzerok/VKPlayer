@@ -5,6 +5,7 @@ module.exports = function (PlayerApp) {
 
     return Backbone.Marionette.CollectionView.extend({
         childView: TrackView,
-        tagName: 'ul'
+        tagName: 'ul',
+        className: 'player-list container'
     });
 };

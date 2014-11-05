@@ -1,15 +1,23 @@
-$main-color: #020C16
-$main-bg-color: #767F88
+$main-color: #E8CB10
+$main-color-d: #A39750
+$main-bg-color: #434D57
+
+ul
+    list-style-type: none
 
 .player-list
-    background: $main-color-d
+    background: $main-bg-color
     color: $main-color
-    display: none
     
     .song
         height: 20px
-        border-bottom: 1px solid $main-color
-            
+        background: #e2e2e2
+        background: -moz-linear-gradient(top, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%)
+        background: -webkit-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)
+        background: -o-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)
+        background: -ms-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)
+        background: linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)
+                    
         .glyphicon
             &:hover
                 color: #FFFFFF
