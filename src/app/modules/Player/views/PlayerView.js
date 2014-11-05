@@ -5,7 +5,7 @@ module.exports = function (PlayerApp) {
 
     return Backbone.Marionette.ItemView.extend({
         template: PlayerApp.getTemplate('player'),
-        className: 'container',
+        className: 'player container',
 
         ui: {
             player: 'audio#player',
