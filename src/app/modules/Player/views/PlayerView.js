@@ -1,21 +1,32 @@
 'use strict';
 
 module.exports = function (PlayerApp) {
+    var PlayerService = require('../services/PlayerService');
+
     return Backbone.Marionette.ItemView.extend({
         template: PlayerApp.getTemplate('player'),
-        className: 'player-container',
+        className: 'container',
 
         ui: {
             player: 'audio#player',
-            playBtn: 'div#play-btn',
-            prevBtn: 'div#prev-btn',
-            nextBtn: 'div#next-btn'
+            playBtn: 'span#play-btn',
+            prevBtn: 'span#prev-btn',
+            nextBtn: 'span#next-btn'
         },
 
-        triggers: {
-            'click @ui.playBtn': 'player:play',
-            'click @ui.prevBtn': 'player:next',
-            'click @ui.nextBtn': 'player:prev'
+        events: {
+            'click @ui.playBtn': 'onPlay',
+            'click @ui.prevBtn': 'onNext',
+            'click @ui.nextBtn': 'onPrev'
+        },
+
+        onShow: function () {
+            PlayerService.fromAudio(this.ui.player);
+        },
+
+        onPlay: function () {
+            console.log('here');
+            PlayerService.play();
         }
     });
 };
