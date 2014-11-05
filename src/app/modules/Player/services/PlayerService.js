@@ -6,7 +6,7 @@ module.exports = new (Backbone.Marionette.Object.extend({
     currentIndex: 0,
 
     fromAudio: function (audio) {
-        this.player = audio.get(0);
+        this.player = audio;
     },
 
     playlist: function (playlist) {
@@ -15,7 +15,7 @@ module.exports = new (Backbone.Marionette.Object.extend({
     },
 
     current: function () {
-        return this.tracks.at(this.current);
+        return this.tracks.at(this.currentIndex);
     },
 
     play: function () {

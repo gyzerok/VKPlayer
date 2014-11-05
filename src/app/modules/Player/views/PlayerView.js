@@ -21,7 +21,7 @@ module.exports = function (PlayerApp) {
         },
 
         onShow: function () {
-            PlayerService.fromAudio(this.ui.player);
+            PlayerService.fromAudio(this.ui.player.get(0));
         },
 
         onPlay: function () {
