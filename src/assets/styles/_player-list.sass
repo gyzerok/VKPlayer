@@ -5,24 +5,57 @@ $main-bg-color: #434D57
 ul
     list-style-type: none
 
+/* Let's get this party started */
+::-webkit-scrollbar
+    width: 7px
+
+
+
+::-webkit-scrollbar-track
+    // background: #FFFFFF
+
+/* Handle */
+::-webkit-scrollbar-thumb
+    background: $main-color
+
+
+::-webkit-scrollbar-thumb:window-inactive
+    background: $main-color
+    opacity: 0.6
+
+
 .player-list
     background: $main-bg-color
     color: $main-color
-    
+    max-height: 500px
+    overflow-y: scroll
+
+
+
     .song
         height: 20px
-        background: #e2e2e2
-        background: -moz-linear-gradient(top, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%)
-        background: -webkit-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)
-        background: -o-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)
-        background: -ms-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)
-        background: linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)
-                    
+        background: $main-bg-color
+        border-bottom: 1px solid #777
+        height: 30px
+        line-height: 30px
+        // background: -moz-linear-gradient(top, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%)
+        // background: -webkit-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)
+        // background: -o-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)
+        // background: -ms-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)
+        // background: linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)
+        &.active
+            background: $main-color-d
+            color: $main-bg-color
+
+            .name
+                span
+                    color: #000
+
         .glyphicon
             &:hover
                 color: #FFFFFF
                 cursor: pointer
-            
+
         .name
             span
                 color: #FFFFFF

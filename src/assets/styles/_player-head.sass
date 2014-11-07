@@ -31,14 +31,18 @@ $main-bg-color: #434D57
             color: $main-color-d
         &.active
             color: #76E15F
-        
-            
-            
+
+
+
 .seek
     background: $main-bg-color
     .progress
         cursor: pointer
         height: 3px
+        border-radius: 0
+        transition: 0.3s
         margin-bottom: 1px
+        &:hover
+            height: 10px
         .progress-bar
             background: $main-color
